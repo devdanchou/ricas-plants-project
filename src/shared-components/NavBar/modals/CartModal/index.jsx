@@ -33,15 +33,7 @@ const CartModal = (props) => {
   }
 
   return (
-    <RemoveScroll>
-      <div className="fixed top-0 left-0 flex justify-end w-full h-full bg-black/30 backdrop-blur-sm font-lat0">
         <div className="flex flex-col w-full h-screen max-w-xl bg-white">
-          <button
-            className="absolute top-0 right-0 p-2"
-            onClick={() => setIsCartOpen(false)}
-          >
-            <i className="text-3xl fa-regular fa-circle-xmark text-emerald-400"></i>
-          </button>
           <div className="text-3xl text-center text-white py-8 shadow-md bg-emerald-800 font-playfair">
             {username}&apos;s Cart
           </div>
@@ -49,7 +41,7 @@ const CartModal = (props) => {
             <LoadingSpinner />
           ) : (
             <>
-              <div className="flex-1 overflow-y-scroll">
+              <div className="flex-1 overflow-y-scroll pb-20">
                 {items.map((item, idx) => (
                   <div
                     key={item.id}
@@ -76,8 +68,6 @@ const CartModal = (props) => {
             </>
           )}
         </div>
-      </div>
-    </RemoveScroll>
   );
 };
 
