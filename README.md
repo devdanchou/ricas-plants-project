@@ -1,4 +1,4 @@
-# rica-s-plants-project
+# Ricas Plants Project
 
 # React + Vite
 
